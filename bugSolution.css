@@ -1,0 +1,25 @@
+/* bugSolution.css */
+#container {
+  width: calc(100% - 10px);
+}
+
+/*Correctly using calc() with consistent units and parenthesis*/
+#nestedExample {
+  width: calc(50% - calc(20px + 10px));
+}
+
+/*Avoid inconsistent units*/
+#inconsistentUnits {
+  width: calc(100% - 10px); /*Correct*/
+  /*width: calc(100% - 10); Incorrect - unit mismatch*/
+}
+
+/* Correctly nested calc() expressions */
+#correctlyNested {
+ width: calc( (100% - 20px) / 2 );
+}
+
+/*Incorrectly nested calc() expressions - missing closing parenthesis*/
+#incorrectlyNested {
+  /*width: calc( (100% - 20px) / 2; Incorrect - missing closing parenthesis*/ 
+} 
